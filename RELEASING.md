@@ -76,6 +76,18 @@ version, where "vX.Y.Z" is a valid [semantic version][].
 
 1.  Go to the [GitHub Tags][] page and click "Add release notes"
     next to the new version.
+2.  Title the release "SPF XY (X.Y.Z)". You can run
+    `bin/name.js` to generate a title to copy/paste.
+
+3.  Write the release notes, highlighting new features or
+    fixed bugs. Auto-link to issues using the `#NUM` syntax.
+
+4.  Attach the distribution ZIP archive `spfjs-X.Y.Z-dist.zip`.
+
+5.  Publish the release.
+
+6.  Push the website.
+7.  Publish announcing the new version and linking to the [GitHub release page](https://github.com/youtube/spfjs/tags) and the [Download](https://youtube.github.io/spfjs/download/) page.
 
 2.  Title the release "SPF XY (X.Y.Z)". You can run
     `bin/name.js` to generate a title to copy/paste.

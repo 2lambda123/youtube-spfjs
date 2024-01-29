@@ -14,7 +14,7 @@ NPM = $(shell command -v npm || echo _missing_npm_)
 .PHONY: deprecated
 
 # Require npm and show deprecation warning
-default all tests demo lint fix dist: deprecated $(NPM)
+default all tests demo lint fix dist announce announcement: deprecated $(NPM)
 spf spf-debug spf-trace: deprecated $(NPM)
 boot boot-debug boot-trace: deprecated $(NPM)
 clean reset: deprecated $(NPM)
@@ -86,6 +86,7 @@ clean:
 	@echo "    npm run clean"
 	@echo "Please switch to calling npm directly."
 	@echo
+	@echo "8.  Announce the new version by invoking the `scripts/announce.js` script."
 	@$(NPM) install && $(NPM) run clean
 # Get back to a newly-cloned state.
 reset: clean
