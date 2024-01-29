@@ -2,7 +2,7 @@
 
 When a new version of SPF needs to be released, follow these
 steps. You will need admin privileges for the [youtube/spfjs][]
-repo.  This document will use "vX.Y.Z" to refer to the new
+repo.  This document will use "vX.Y.Z" to refer to the new release
 version, where "vX.Y.Z" is a valid [semantic version][].
 
 
@@ -22,7 +22,7 @@ version, where "vX.Y.Z" is a valid [semantic version][].
     - updates the documenation using `bin/gendocs.sh`.  This:
         - updates the `release` and `version` properties in the
           `web/_config.yml` file to match the output of
-          `bin/name.js` and `bin/name.js --version`
+          `bin/name.js` and `bin/name.js`
         - updates the `doc/api.md` and `doc/download.md` files,
           the sources for the [API][] and [Download][] pages
     - commits the change, titling it "Update documentatation for
@@ -38,7 +38,7 @@ version, where "vX.Y.Z" is a valid [semantic version][].
 2.  In a clone of the repo (not of a fork), run `git log` to
     locate the hash of the merge commit.
 
-3.  Run `bin/release.sh <commit-hash>`, replacing
+3.  Run `bin/release.sh <commit-hash>`, specifying the `vX.Y.Z` version number with `<commit-hash>`, replacing
     `<commit-hash>` with the hash of the merge commit. This:
 
     - switches to a temporary working branch
@@ -83,9 +83,9 @@ version, where "vX.Y.Z" is a valid [semantic version][].
 3.  Write the release notes, highlighting new features or
     fixed bugs. Auto-link to issues using the `#NUM` syntax.
 
-4.  Attach the distribution ZIP archive `spfjs-X.Y.Z-dist.zip`.
+4.  Attach the distribution ZIP archive `spfjs-X.Y.Z-dist.zip` and provide detailed release notes, highlighting new features or fixed bugs. Auto-link to issues using the `#NUM` syntax.
 
-5.  Publish the release.
+5.  Publish the release on the GitHub Tags page and push the website.
 
 6.  Push the website.
 
@@ -96,7 +96,7 @@ version, where "vX.Y.Z" is a valid [semantic version][].
     new version and linking to the GitHub release page and the
     [Download][] page.
 
-2.  Send an email to <spfjs@googlegroups.com> announcing the
+2.  Send an email to <spfjs@googlegroups.com>, summarizing the release notes, and linking to the GitHub release page and the [Download](https://youtube.github.io/spfjs/download/) page. announcing the
     new version, summarizing the release notes, and linking to
     the GitHub release page and the [Download][] page.
 
@@ -104,7 +104,7 @@ version, where "vX.Y.Z" is a valid [semantic version][].
 
 [semantic version]: http://semver.org/
 [youtube/spfjs]: https://github.com/youtube/spfjs
-[spfjs]: https://www.npmjs.com/package/spf
+[spfjs]: https://www.npmjs.com/package/spfjs
 [Google Hosted Libraries]: https://developers.google.com/speed/libraries/devguide#spf
 [GitHub Tags]: https://github.com/youtube/spfjs/tags
 [API]: https://youtube.github.io/spfjs/api/
